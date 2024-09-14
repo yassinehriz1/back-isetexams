@@ -5,7 +5,7 @@ require("dotenv").config();
 const allExamsRoute = require("./routes/allExams")
 const postExamRoute = require("./routes/postExam")
 const downloadExamRoute = require("./routes/downloadExam")
-
+const deleteExamRoute = require("./routes/deleteExam")
 
 const app = express();
 app.use(bodyParser.json())
@@ -20,6 +20,7 @@ const dataBase = mongoose.connection
 app.use("/",allExamsRoute);
 app.use("/",postExamRoute);
 app.use("/",downloadExamRoute)
+app.use("/",deleteExamRoute);
 
 
 
